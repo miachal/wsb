@@ -12,15 +12,3 @@ class AbstractAccount(ABC):
   @abstractmethod
   def close(self):
     pass
-
-  @abstractmethod
-  def data(self):
-    pass
-
-  @abstractmethod
-  def isActive(self):
-    pass
-
-  @abstractmethod
-  def __repr__(self):
-    pass

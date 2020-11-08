@@ -7,17 +7,17 @@ class BankAccount(AbstractAccount):
     self._id = id
     self._balance = balance
     self._type = AccountType.PL
-    self._isActive = True
+    self._is_active = True
 
-  def data(self):
+  def as_data(self):
     return [
       self._id,
       self._balance,
       self._type
     ]
 
-  def isActive(self):
-    return self._isActive
+  def is_active(self):
+    return self._is_active
 
   def deposit(self, amount):
     self._balance += amount
@@ -28,12 +28,15 @@ class BankAccount(AbstractAccount):
     self._balance -= amount
 
   def close(self):
-    if self._isActive:
+    if self._is_active:
       self.withdraw(self._balance)
-      self._isActive = False
+      self._is_active = False
     else:
       raise AccountException('This account is already closed.')
 
-  def __repr__(self):
-    return f'ID: {self._id}\tType: {self._type}\tBalance: {self._balance}\tActive: {"YES" if self._isActive else "NO"}'
+  def __eq__(self, account_id):
+    return self._id == account_id
+
+  def __str__(self):
+    return f'ID: {self._id}\tType: {self._type}\tBalance: {self._balance}\tActive: {"YES" if self._is_active else "NO"}'
 

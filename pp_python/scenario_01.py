@@ -14,7 +14,7 @@ company_01 = BankAccount_COVID19_company('COMPANY_01', 10000)
 for account in [pl_01, int_01, covid_01, company_01]:
   bank.add(account)
  
-bank.printAccounts()
+print(bank)
 
 # BankAccount
 print()
@@ -54,6 +54,8 @@ except AccountException as e:
 # COMPANY
 print()
 print(company_01)
+company_01.deposit(1000)
+company_01.deposit(1000)
 try:
   company_01.close()
 except AccountException as e:
@@ -62,5 +64,5 @@ print(company_01)
 
 # CSV
 print()
-bank.printAccounts()
+print(bank)
 bank.save('test.csv')
