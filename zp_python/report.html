@@ -1,0 +1,35 @@
+<!doctype html><html><head><title>Multithreading/Multiprocessing benchmark results</title><style>
+body {
+  font-size: 10pt;
+}
+
+h2 {
+  padding-top: 10pt;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed ;
+}
+
+td, th {
+  border: 2px solid #b9b9b9;
+  padding: 10px;
+  text-align: center;
+  width: 25% ;
+}
+
+th {
+  background-color: #d5d5d5;
+}
+
+td {
+}
+
+tr:nth-child(odd) {
+  background-color: #eeeeee;
+}
+</style></head><body><h1>Multithreading/Multiprocessing benchmark results</h1><p></p><h2>Execution environment</h2><p>Python version: 3.8.10<br />Interpreter: CPython<br />Interpreter version: 3.8.10 (default, Jun  2 2021, 10:49:15) 
+[GCC 10.3.0]<br />Operating system: Linux<br />Operating system version: 5.8.0-63-generic<br />Processor: x86_64<br />CPUs: 12</p><h2>Test results</h2><p>The following table shows detailed test results:</p><table><tr><th>Execution</th><th>1 thread (s)</th><th>4 threads (s)</th><th>4 processes (s)</th><th>processes based on number of CPUs (s)</th></th><tr><td>1</td><td>90.614</td><td>133.383</td><td>26.013</td><td>13.527</td></tr><tr><td>2</td><td>90.895</td><td>133.14</td><td>26.241</td><td>13.407</td></tr><tr><td>3</td><td>90.872</td><td>130.397</td><td>25.734</td><td>13.343</td></tr><tr><td>4</td><td>90.878</td><td>129.665</td><td>25.916</td><td>13.482</td></tr><tr><td>5</td><td>91.353</td><td>129.711</td><td>25.653</td><td>13.701</td></tr></table><h2>Summary</h2><p>The following table shows the median of all results:</p><table><tr><th>Execution</th><th>1 thread (s)</th><th>4 threads (s)</th><th>4 processes (s)</th><th>processes based on number of CPUs (s)</th></th><tr><td>Median:</td><td>90.878</td><td>130.397</td><td>25.916</td><td>13.482</td></tr></table><p>App author: miachal</p></body></html>
